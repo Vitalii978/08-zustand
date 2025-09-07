@@ -12,7 +12,8 @@ export default function NoteForm() {
     const router = useRouter();
     const {draft,setDraft,clearDraft} = useNoteDraft();
     const client = useQueryClient();
-        const handleChange = (
+    
+    const handleChange = (
     event: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
@@ -47,7 +48,7 @@ export default function NoteForm() {
               <label htmlFor="title">Title</label>
               <input id="title" type="text" name="title" className={css.input}
               value={draft?.title} onChange={handleChange}/>
-              
+                  
             </div>
 
             <div className={css.formGroup}>
